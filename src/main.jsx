@@ -1,10 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { ThemeProvider } from 'styled-components'
+import { Details } from './pages/Details'
+import { Home } from './pages/Home'
+import { SignIn } from './pages/SignIn'
+import { SignUp } from './pages/SignUp'
+import { Profile } from './pages/Profile'
+import { New } from './pages/New'
+import theme from './styles/theme'
+import GlobalStyle from './styles/global'
+import { Routes } from './routes'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+      <Routes />
+    </ThemeProvider>
   </React.StrictMode>,
 )
