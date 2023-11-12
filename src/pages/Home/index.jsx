@@ -35,7 +35,7 @@ export function Home() {
         <Input placeholder = "Pesquisar" icon={FiSearch}/>
       </Search>
       <Content>
-        <Section title="Minhas Notas">
+        <Section title="Movimentação">
           <Note data={{title: "React", 
           tags : [{id: "1", name: "React"},
           {id: "2", name: "Next"}

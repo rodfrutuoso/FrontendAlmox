@@ -7,14 +7,14 @@ height: 100vh;
 
 display: grid;
 grid-template-columns: 200px auto;
-grid-template-rows: 105px 128px auto 64px;
+grid-template-rows: 75px 128px auto 64px;
 grid-template-areas: 
 "brand header"
 "menu search"
 "menu content"
 "newnote content";
 
-background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 `
 
 export const Brand = styled.div`
@@ -25,9 +25,9 @@ export const Brand = styled.div`
 
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_100};
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
     >h1{
         font-size: 24px;
@@ -38,7 +38,7 @@ export const Brand = styled.div`
 export const Menu = styled.ul`
     grid-area: menu;
     padding-left: 10px;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     padding-top: 64px;
     text-align: left;
 
