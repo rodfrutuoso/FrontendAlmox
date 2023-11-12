@@ -14,6 +14,11 @@ grid-template-areas:
 "menu content";
 
 background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+
+#auxDiv{
+    display: flex;
+    justify-content: center;
+}
 `
 
 export const Brand = styled.div`

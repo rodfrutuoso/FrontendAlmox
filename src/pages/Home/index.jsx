@@ -10,13 +10,20 @@ import { Table } from '../../components/Table';
 const data =[
   ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"],
   ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
   ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""]
 ]
 
 const widths = [100, 100, 300, 100, 100, 100, 200, 50];
 
 const inputs = [6,7]
+// const inputs = [[6,"text"],[7,"number"]]
 
 export function Home() {
   return (
@@ -47,7 +54,9 @@ export function Home() {
       </Search>
       <Content>
         <Section title="Movimentação">
+          <div id='auxDiv'>
           <Table datas={data} widths={widths} inputs={inputs}/>
+          </div>
         </Section>
       </Content>
 

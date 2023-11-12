@@ -4,6 +4,7 @@ export const Container = styled.div`
     border: 2px solid ${({ theme }) => theme.COLORS.GREEN};
     padding: 15px;
     border-radius: 10px;
+    
 
    .cabecalho{
         margin-bottom: 10px;
@@ -20,7 +21,7 @@ export const Container = styled.div`
    .conteudo{
         color: ${({ theme }) => theme.COLORS.GRAY_300};
         margin-bottom: 10px;
-        font-size: 12px;
+        font-size: 13px;
         list-style: none;
         
 
@@ -41,8 +42,10 @@ export const Container = styled.div`
                 
                 color: ${({ theme }) => theme.COLORS.GREEN};
                 background: transparent;
-                border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
-                border-radius: 5px;
+                border: 1px ;
+                border-bottom-style: solid;
+                border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_300};
+               
             }
         }
    }

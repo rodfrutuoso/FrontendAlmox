@@ -3,8 +3,9 @@ import React from 'react'; // Adicione esta linha
 
 
 export function Table({ datas, widths, inputs, ...rest }) {
+    var widthTotal = 0
     return (
-        <Container {...rest}>
+        <Container {...rest} style={{ width: `${widths.reduce((acc, width) => acc + width, 0)+50}px` }}>
             <div className="cabecalho">
                 {
                     datas[0].map((titulo, index) => <h3 key={titulo} style={{ width: widths[index] }} >{titulo}</h3>)
