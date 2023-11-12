@@ -32,6 +32,18 @@ export const Container = styled.div`
             &:nth-child(odd) {
                 background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
             }
+
+            >input{
+                font-size: 12px;
+                height: 16px;
+                margin: 0 2px;
+                padding: 0 2px;
+                
+                color: ${({ theme }) => theme.COLORS.GREEN};
+                background: transparent;
+                border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
+                border-radius: 5px;
+            }
         }
    }
    

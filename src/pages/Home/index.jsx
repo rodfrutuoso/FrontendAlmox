@@ -14,7 +14,9 @@ const data =[
   ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""]
 ]
 
-const widths = [100, 100, 350, 105, 205, 100, 50, 10];
+const widths = [100, 100, 300, 100, 100, 100, 200, 50];
+
+const inputs = [6,7]
 
 export function Home() {
   return (
@@ -45,7 +47,7 @@ export function Home() {
       </Search>
       <Content>
         <Section title="Movimentação">
-          <Table datas={data} widths={widths}/>
+          <Table datas={data} widths={widths} inputs={inputs}/>
         </Section>
       </Content>
 
