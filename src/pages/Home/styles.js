@@ -7,12 +7,11 @@ height: 100vh;
 
 display: grid;
 grid-template-columns: 200px auto;
-grid-template-rows: 75px 128px auto 64px;
+grid-template-rows: 75px 75px auto;
 grid-template-areas: 
 "brand header"
 "menu search"
-"menu content"
-"newnote content";
+"menu content";
 
 background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 `
@@ -50,7 +49,7 @@ export const Menu = styled.ul`
 
 export const Search = styled.div`
     grid-area: search;
-    padding: 64px 64px 0;
+    padding: 16px 64px 0;
 
 `
 
@@ -61,18 +60,3 @@ export const Content = styled.div`
 
 `
 
-export const NewNote = styled(Link)`
-    grid-area: newnote;
-
-    background-color: ${({ theme }) => theme.COLORS.ORANGE};
-    border: none;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg{
-        margin-right: 8px;
-    }
-`
