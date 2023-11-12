@@ -1,21 +1,26 @@
 import { Container } from "./styles";
 
-export function Table({data}){
+export function Table({ datas, widths, ...rest }) {
     return (
-        <Container>
+        <Container {...rest}>
             <div className="cabecalho">
-            {
-                data[0].map(titulo => <h3>{titulo}</h3>)
-            }
+                {
+                    datas[0].map((titulo, index) => <h3  key={titulo} style={{ width: widths[index] }} >{titulo}</h3>)
+                }
             </div>
-            <div className="conteudo">
-            {
-                data.map((titulo, index) => {
-                <li>{titulo}</li>
-            })
-            }                
-            </div>
-            
+            <ul className="conteudo">
+                {
+                    datas.map((dado, index) => {
+                        if (index > 0) {
+                            return(
+                            <li key={index}>
+                                {dado.map((valor,i) => <div key={i} style={{ width: widths[index] }}> {valor}</div>)}
+                            </li>)
+                        }
+                    })
+                }
+            </ul>
+
         </Container>
 
     )

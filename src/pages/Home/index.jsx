@@ -8,11 +8,13 @@ import {Section} from '../../components/Section'
 import { Table } from '../../components/Table';
 
 const data =[
-  ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"]
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "QTD A ENVIAR"]
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "QTD A ENVIAR"]
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "QTD A ENVIAR"]
+  ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""]
 ]
+
+const widths = [100, 200, 200, 105, 205, 100, 50, 10];
 
 export function Home() {
   return (
@@ -43,9 +45,7 @@ export function Home() {
       </Search>
       <Content>
         <Section title="Movimentação">
-          <Table data={data}/>
-          
-          
+          <Table datas={data} widths={widths}/>
         </Section>
       </Content>
 
