@@ -6,7 +6,7 @@ width: 100%;
 height: 100vh;
 
 display: grid;
-grid-template-columns: 250px auto;
+grid-template-columns: 200px auto;
 grid-template-rows: 105px 128px auto 64px;
 grid-template-areas: 
 "brand header"
@@ -37,9 +37,10 @@ export const Brand = styled.div`
 
 export const Menu = styled.ul`
     grid-area: menu;
+    padding-left: 10px;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
     padding-top: 64px;
-    text-align: center;
+    text-align: left;
 
     >li{
         margin-bottom: 24px;

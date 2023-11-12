@@ -11,20 +11,23 @@ export function Home() {
   return (
     <Container>
       <Brand>
-        <h1>Notes</h1>
+        <h1>Almox02</h1>
       </Brand>
       <Header>
 
       </Header>
       <Menu>
         <li>
-          <ButtonText title="Todos" isActive />
+          <ButtonText title="Movimentação" isActive />
         </li>
         <li>
-          <ButtonText title="React" />
+          <ButtonText title="Jogo entre projetos" />
         </li>
         <li>
-          <ButtonText title="Node" />
+          <ButtonText title="Orçamentos" />
+        </li>
+        <li>
+          <ButtonText title="Lista de materiais" />
         </li>
       </Menu>
 
