@@ -5,15 +5,21 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
     align-items: stretch;
+
+    flex: 1;
+    background: url(${backgroundImg}) no-repeat center center;
+    background-size: cover;
 `
 
 export const Form = styled.form`
-    padding: 0 136px;
     display: flex;
+    width: 100%;
+    max-width: 500px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
 
     >h1{
         font-size: 48px;
@@ -22,8 +28,8 @@ export const Form = styled.form`
     
     >h2{
         font-size: 24px;
-        margin: 48px 0;  
-        
+        margin: 48px 0;
+        color: ${({ theme }) => theme.COLORS.GREEN};        
     }
 
     >p{
@@ -33,13 +39,8 @@ export const Form = styled.form`
 
     >a{
         margin-top: 124px;
-        color: ${({ theme }) => theme.COLORS.ORANGE}
+        color: ${({ theme }) => theme.COLORS.GREEN}
     }
 `
 
-export const Background = styled.div`
-    flex: 1;
-    background: url(${backgroundImg}) no-repeat center center;
-    background-size: cover;
-    
-`
+

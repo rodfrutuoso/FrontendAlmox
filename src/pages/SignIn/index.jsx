@@ -1,4 +1,4 @@
-import { Container, Form, Background } from "./styles";
+import { Container, Form,  } from "./styles";
 import { Input } from "../../components/Input"
 import { FiMail, FiLock } from "react-icons/fi"
 import { Button } from "../../components/Button"
@@ -28,7 +28,7 @@ export function SignIn() {
         </Link>
       </Form>
 
-      <Background alt="Background"/>
+      
     </Container>
   );
 }
