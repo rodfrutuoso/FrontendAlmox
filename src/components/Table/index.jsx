@@ -18,13 +18,15 @@ export function Table({ datas, widths, inputs, ...rest }) {
                             <li key={index}>
                                 {dado.map((valor, i) => { return(
                                     <React.Fragment key={i}>{
-                                        inputs.includes(i) ? (
-                                         <input
-                                            type="number"
-                                            style={{ width: widths[i] }}
-                                        />
+                                        inputs.some(([inputIndex]) => inputIndex === i) ? (
+                                            <input
+                                                type={inputs.find(([inputIndex]) => inputIndex === i)[1]}
+                                                style={{ width: widths[i] }}
+                                            />
                                         ) : (
-                                        <div key={i} style={{ width: widths[i] }}> {valor}</div>
+                                            <div key={i} style={{ width: widths[i] }}>
+                                                {valor}
+                                            </div>
                                         )}
                                     </React.Fragment>)
                                 })}

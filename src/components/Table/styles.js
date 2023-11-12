@@ -7,6 +7,7 @@ export const Container = styled.div`
     
 
    .cabecalho{
+        padding: 0 5px;
         margin-bottom: 10px;
         font-size: 14px;
         display: flex;
@@ -26,6 +27,7 @@ export const Container = styled.div`
         
 
         >li{
+            padding: 0 5px;
             margin-bottom: 5px;
             display: flex;
            

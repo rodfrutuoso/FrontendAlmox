@@ -15,9 +15,17 @@ grid-template-areas:
 
 background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
-#auxDiv{
+#auxDivMov{
     display: flex;
     justify-content: center;
+}
+#auxDivMA{
+width: 100%;
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+align-items: center;
 }
 `
 
@@ -58,6 +66,8 @@ export const Menu = styled.ul`
 export const Search = styled.div`
     grid-area: search;
     padding: 16px 64px 0;
+    display: flex;
+    gap: 15px;
 
 `
 

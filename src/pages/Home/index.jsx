@@ -1,13 +1,16 @@
-import {FiSearch} from 'react-icons/fi'
+import { FiSearch } from 'react-icons/fi'
 
 import { Container, Brand, Menu, Search, Content } from "./styles";
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Input } from '../../components/Input';
-import {Section} from '../../components/Section'
+import { Section } from '../../components/Section'
 import { Table } from '../../components/Table';
+import { Noteitem } from '../../components/Noteitem';
+import { Button } from '../../components/Button';
+import { Select } from '../../components/Select';
 
-const data =[
+const data = [
   ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"],
   ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
   ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
@@ -20,10 +23,12 @@ const data =[
   ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""]
 ]
 
-const widths = [100, 100, 300, 100, 100, 100, 200, 50];
+const widths = [100, 100, 350, 100, 100, 100, 200, 50];
 
-const inputs = [6,7]
-// const inputs = [[6,"text"],[7,"number"]]
+// const inputs = [6,7]
+const inputs = [[6, "text"], [7, "number"]]
+
+const select = ["Saída", "Devolução"]
 
 export function Home() {
   return (
@@ -50,12 +55,20 @@ export function Home() {
       </Menu>
 
       <Search>
-        <Input placeholder = "Pesquisar" icon={FiSearch}/>
+        <Select title="Tipo de Movimentação" lista={select} />
+        <Input placeholder="Projeto" icon={FiSearch} />
+        <Button title="Pesquisar"/>
       </Search>
       <Content>
         <Section title="Movimentação">
-          <div id='auxDiv'>
-          <Table datas={data} widths={widths} inputs={inputs}/>
+          <div id='auxDivMov'>
+            <Table datas={data} widths={widths} inputs={inputs} />
+          </div>
+        </Section>
+        <Section title="Materiais adicionais">
+          <div id='auxDivMA'>
+            <Noteitem codigo="220001" descricao="ALÇA NUM SEI DAS QUANTAS 0001/1" quantidade="25" />
+            <Noteitem isNew />
           </div>
         </Section>
       </Content>
