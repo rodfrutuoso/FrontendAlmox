@@ -14,7 +14,7 @@ const data =[
   ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""]
 ]
 
-const widths = [100, 200, 200, 105, 205, 100, 50, 10];
+const widths = [100, 100, 350, 105, 205, 100, 50, 10];
 
 export function Home() {
   return (
