@@ -1,11 +1,18 @@
-import {FiPlus, FiSearch} from 'react-icons/fi'
+import {FiSearch} from 'react-icons/fi'
 
 import { Container, Brand, Menu, Search, Content } from "./styles";
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Input } from '../../components/Input';
 import {Section} from '../../components/Section'
-import {Note} from '../../components/Note'
+import { Table } from '../../components/Table';
+
+const data =[
+  ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"]
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "QTD A ENVIAR"]
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "QTD A ENVIAR"]
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "QTD A ENVIAR"]
+]
 
 export function Home() {
   return (
@@ -36,10 +43,7 @@ export function Home() {
       </Search>
       <Content>
         <Section title="Movimentação">
-          <Note data={{title: "React", 
-          tags : [{id: "1", name: "React"},
-          {id: "2", name: "Next"}
-          ]}}/>
+          <Table data={data}/>
           
           
         </Section>
