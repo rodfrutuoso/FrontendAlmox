@@ -10,6 +10,7 @@ export const Container = styled.div`
         font-size: 14px;
         display: flex;
         flex-direction: row;
+        align-items: end;
         color: ${({ theme }) => theme.COLORS.ORANGE};
         border: 2px;
         border-bottom-style: solid;

@@ -38,8 +38,11 @@ export const Menu = styled.ul`
     grid-area: menu;
     padding-left: 10px;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-    padding-top: 64px;
+    padding-top: 36px;
     text-align: left;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: ${({ theme }) => theme.COLORS.GRAY_100};
 
     >li{
         margin-bottom: 24px;

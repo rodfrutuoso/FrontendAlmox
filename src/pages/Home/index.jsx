@@ -36,7 +36,7 @@ export function Home() {
           <ButtonText title="Orçamentos" />
         </li>
         <li>
-          <ButtonText title="Lista de materiais" />
+          <ButtonText title="Histórico" />
         </li>
       </Menu>
 
