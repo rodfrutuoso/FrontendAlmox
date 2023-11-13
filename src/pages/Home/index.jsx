@@ -14,25 +14,25 @@ import { Checkbox } from '../../components/Checkbox';
 import { useState } from 'react';
 
 const data = [
-  ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", ""]
+  ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR", "VISTO"],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", "", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", "", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", "", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "#ADC#", "", ""],
+  ["B-123456", "123456789", "POSTES DT 11/400", "5", "3", "2", "", "", ""],
+  ["B-123456", "123456789", "POSTES 12/1000", "5", "3", "2", "", "", ""]
 ]
 
-const widths = [100, 100, 350, 100, 100, 100, 200, 50];
+const widths = [9.35,9.35,23.36,9.35,9.35,9.35,18.69,6.54,4.67];
 
 // const inputs = [6,7]
-const inputs = [[6, "text"], [7, "number"]]
+const inputs = [[6, "text"], [7, "number"], [8, "checkbox"]]
 
 const select = ["Saída", "Devolução"]
-const dataOrcamento = new Date("10/10/2023") 
+const dataOrcamento = new Date("10/10/2023")
 let check
 
 function formatDate(date) {
@@ -69,29 +69,32 @@ export function Home() {
       <Search>
         <Select title="Tipo de Movimentação" lista={select} />
         <Input placeholder="Projeto" icon={FiSearch} />
-        <Button title="Pesquisar"/>
+        <Button title="Pesquisar" />
         <Calendar value={dataOrcamento}>
           <h3>Data do orçamento</h3>
-          <div id='dataOrcamento'>{formatDate(dataOrcamento)}</div>          
+          <div id='dataOrcamento'>{formatDate(dataOrcamento)}</div>
         </Calendar>
       </Search>
       <Content>
         <Section title="Movimentação">
-           
+          <div id='boxChecker' ><span>Selecionar tudo</span> <input type="checkbox" /></div>
           <div id='auxDivMov'>
             <Table datas={data} widths={widths} inputs={inputs} />
           </div>
         </Section>
-        <Section title="Materiais adicionais">
+        <Section id="Movimentacao" title="Materiais adicionais">
           <div id='auxDivMA'>
             <Noteitem codigo="220001" descricao="ALÇA NUM SEI DAS QUANTAS 0001/1" quantidade="25" />
             <Noteitem isNew />
           </div>
         </Section>
+        <div style={{width: "100%", maxWidth: "30%", marginInline: "auto" }}>
+          <Button title="Movimentar"/>
+        </div>
       </Content>
 
     </Container>
   );
 }
 // <Check checked={check} onClick={() => setChecked(!check)} /> 
-{/* <Checkbox/> */}
+{/* <Checkbox/> */ }

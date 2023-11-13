@@ -10,6 +10,7 @@ export default createGlobalStyle`
 body{
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     color: ${({ theme }) => theme.COLORS.WHITE};
+    overflow-x: hidden;
 }
 
 body, input, button, textarea{
@@ -30,4 +31,7 @@ button, a {
 button:hover, a:hover {
     filter: brightness(0.9);
 }
+
+
 `
+
