@@ -9,6 +9,9 @@ import { Table } from '../../components/Table';
 import { Noteitem } from '../../components/Noteitem';
 import { Button } from '../../components/Button';
 import { Select } from '../../components/Select';
+import { Checkbox } from '../../components/Checkbox';
+
+import { useState } from 'react';
 
 const data = [
   ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR"],
@@ -29,7 +32,8 @@ const widths = [100, 100, 350, 100, 100, 100, 200, 50];
 const inputs = [[6, "text"], [7, "number"]]
 
 const select = ["Saída", "Devolução"]
-const dataOrcamento = new Date("11/10/2023") 
+const dataOrcamento = new Date("10/10/2023") 
+let check
 
 function formatDate(date) {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
@@ -37,6 +41,8 @@ function formatDate(date) {
 }
 
 export function Home() {
+
+  const [check, setCheck] = useState(false);
   return (
     <Container>
       <Brand>
@@ -71,6 +77,7 @@ export function Home() {
       </Search>
       <Content>
         <Section title="Movimentação">
+           
           <div id='auxDivMov'>
             <Table datas={data} widths={widths} inputs={inputs} />
           </div>
@@ -86,3 +93,5 @@ export function Home() {
     </Container>
   );
 }
+// <Check checked={check} onClick={() => setChecked(!check)} /> 
+{/* <Checkbox/> */}

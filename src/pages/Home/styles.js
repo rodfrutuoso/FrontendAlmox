@@ -98,11 +98,16 @@ export const Calendar = styled.div`
     }
     >div{
         font-size: 20px;
-        color: ${({ theme, value }) => new Date(value) > new Date()-(20*24*60*60*1000) ? theme.COLORS.GREEN : theme.COLORS.RED};
+        color: ${({ theme, value }) => new Date(value) > new Date() - (20 * 24 * 60 * 60 * 1000) ? theme.COLORS.GREEN : theme.COLORS.RED};
     }
 `
 
-export const Check = styled.div`
-
-`
+// export const Check = styled.div`
+//   width: 24px;
+//   height: 24px;
+//   background-color: ${({ theme, checked }) => (checked ? theme.COLORS.BACKGROUND_900 : theme.COLORS.BACKGROUND_800)};
+//   border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
+//   border-radius: 4px;
+//   cursor: pointer;
+// `
 
