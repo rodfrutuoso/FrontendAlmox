@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
 
-export const Container = styled.div`
+export const Container = styled.button`
   width: 100%;
   position: relative;
+  border: none;
+  background-color: transparent;
+  margin-top: -10px;
 
   select {
     font-size: 16px;
     -webkit-appearance: none;
     cursor: pointer;
-    
+
     
     width: 100%;
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
@@ -24,7 +27,7 @@ export const Container = styled.div`
     border: 0;
     padding: 0 16px;
     border-radius: 10px;
-    font-weight: 500;
-
+    
   }
 `;
+

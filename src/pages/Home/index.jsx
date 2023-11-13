@@ -1,6 +1,6 @@
 import { FiSearch } from 'react-icons/fi'
 
-import { Container, Brand, Menu, Search, Content } from "./styles";
+import { Container, Brand, Menu, Search, Content, Calendar } from "./styles";
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Input } from '../../components/Input';
@@ -58,6 +58,9 @@ export function Home() {
         <Select title="Tipo de Movimentação" lista={select} />
         <Input placeholder="Projeto" icon={FiSearch} />
         <Button title="Pesquisar"/>
+        <Calendar>
+          
+        </Calendar>
       </Search>
       <Content>
         <Section title="Movimentação">
