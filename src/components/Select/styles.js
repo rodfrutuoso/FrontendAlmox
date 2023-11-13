@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 
-export const Container = styled.button`
+export const Container = styled.div`
   width: 800px;
   position: relative;
   border: none;
   background-color: transparent;
-  margin-top: -10px;
 
   select {
     font-size: 16px;
@@ -27,6 +26,11 @@ export const Container = styled.button`
     border: 0;
     padding: 0 16px;
     border-radius: 10px;
+    font-weight: bold;
+    &:hover{
+      transition: filter 0.2s;
+      filter: brightness(0.9);
+    }
 
     &:focus{
       outline: none;
