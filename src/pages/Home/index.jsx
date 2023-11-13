@@ -32,7 +32,7 @@ const widths = [9.35,9.35,23.36,9.35,9.35,9.35,18.69,6.54,4.67];
 const inputs = [[6, "text"], [7, "number"], [8, "checkbox"]]
 
 const select = ["Saída", "Devolução"]
-const dataOrcamento = new Date("10/10/2023")
+const dataOrcamento = new Date("11/10/2023")
 let check
 
 function formatDate(date) {
