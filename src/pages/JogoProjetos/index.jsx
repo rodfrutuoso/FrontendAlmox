@@ -9,7 +9,6 @@ import { Table } from '../../components/Table';
 import { Noteitem } from '../../components/Noteitem';
 import { Button } from '../../components/Button';
 import { Select } from '../../components/Select';
-import { Checkbox } from '../../components/Checkbox';
 
 import { useState } from 'react';
 
@@ -33,13 +32,14 @@ const inputs = [[6, "text"], [7, "number"], [8, "checkbox"]]
 
 const select = ["Saída", "Devolução"]
 const dataOrcamento = new Date("11/10/2023")
+let check
 
 function formatDate(date) {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
   return date.toLocaleDateString("pt-BR", options);
 }
 
-export function Home() {
+export function JogoProjetos() {
 
   return (
     <Container>
@@ -51,10 +51,10 @@ export function Home() {
       </Header>
       <Menu>
         <li>
-          <ButtonText title="Movimentação" to="/" isActive />
+          <ButtonText title="Movimentação" to="/"  />
         </li>
         <li>
-          <ButtonText title="Jogo entre projetos" to="/jogoprojetos" />
+          <ButtonText title="Jogo entre projetos" to="/jogoprojetos" isActive />
         </li>
         <li>
           <ButtonText title="Orçamentos" />
@@ -74,7 +74,7 @@ export function Home() {
         </Calendar>
       </Search>
       <Content>
-        <Section title="Movimentação">
+        <Section title="Jogo de material entre projetos">
           <div id='boxChecker' ><span>Selecionar tudo</span> <input type="checkbox" /></div>
           <div id='auxDivMov'>
             <Table datas={data} widths={widths} inputs={inputs} />
