@@ -79,6 +79,30 @@ export const Content = styled.div`
 `
 
 export const Calendar = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+
+    height: 52px;
+    border: 0;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-weight: 500;
     
+    >h3{
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
+    }
+    >div{
+        font-size: 20px;
+        color: ${({ theme, value }) => new Date(value) > new Date()-(20*24*60*60*1000) ? theme.COLORS.GREEN : theme.COLORS.RED};
+    }
+`
+
+export const Check = styled.div`
+
 `
 

@@ -29,6 +29,12 @@ const widths = [100, 100, 350, 100, 100, 100, 200, 50];
 const inputs = [[6, "text"], [7, "number"]]
 
 const select = ["Saída", "Devolução"]
+const dataOrcamento = new Date("11/10/2023") 
+
+function formatDate(date) {
+  const options = { year: "numeric", month: "2-digit", day: "2-digit" };
+  return date.toLocaleDateString("pt-BR", options);
+}
 
 export function Home() {
   return (
@@ -58,8 +64,9 @@ export function Home() {
         <Select title="Tipo de Movimentação" lista={select} />
         <Input placeholder="Projeto" icon={FiSearch} />
         <Button title="Pesquisar"/>
-        <Calendar>
-          
+        <Calendar value={dataOrcamento}>
+          <h3>Data do orçamento</h3>
+          <div id='dataOrcamento'>{formatDate(dataOrcamento)}</div>          
         </Calendar>
       </Search>
       <Content>

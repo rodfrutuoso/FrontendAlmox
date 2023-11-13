@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.button`
-  width: 100%;
+  width: 800px;
   position: relative;
   border: none;
   background-color: transparent;
