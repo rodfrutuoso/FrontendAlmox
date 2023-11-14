@@ -60,7 +60,7 @@ export function Home() {
           <ButtonText title="Orçamentos" to="/orcamentos" />
         </li>
         <li>
-          <ButtonText title="Histórico" />
+          <ButtonText title="Histórico" to="/historico"/>
         </li>
       </Menu>
 

@@ -33,7 +33,22 @@ export const Container = styled.section`
 
     #boxCheckerJP{
         color: ${({theme})=>theme.COLORS.GRAY_300};
-        max-width: 88.1%;
+        max-width: 96%;
+        width: 100%;
+        margin-bottom: 12px;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        >input{
+            font-size: 250%;
+        }
+    }
+    
+    #boxCheckerO{
+        color: ${({theme})=>theme.COLORS.GRAY_300};
+        max-width: 60.5%;
         width: 100%;
         margin-bottom: 12px;
         gap: 10px;

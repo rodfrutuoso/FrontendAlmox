@@ -12,25 +12,25 @@ import { Button } from '../../components/Button';
 
 
 const data = [
-  ["PROJETO",  "CODIGO", "TEXTO", "QTD ORÇADA", "ENVIAR", "VISTO"],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "#ADC#", ""],
-  ["B-123456", "123456789", "POSTES DT 11/400", "5", "", ""],
-  ["B-123456", "123456789", "POSTES 12/1000", "5", "", ""]
+  ["DATA MOVIMENTAÇÃO", "PROJETO",  "CODIGO", "TEXTO", "QTD ENVIADA"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES 12/1000", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES DT 11/400", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES 12/1000", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES DT 11/400", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES 12/1000", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES DT 11/400", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES 12/1000", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES DT 11/400", "5"],
+  ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES 12/1000", "5"]
 ]
 
-const widths = [9.35,9.35, 23.36,9.35,6.54,4.67];
+const widths = [20,9.35,9.35,23.36,6.54,4.67];
 
 // const inputs = [6,7]
-const inputs = [[4, "number"], [5, "checkbox"]]
+const inputs = []
 
 
-export function Orcamentos() {
+export function Historico() {
 
   return (
     <Container>
@@ -48,10 +48,10 @@ export function Orcamentos() {
           <ButtonText title="Jogo entre projetos" to="/jogoprojetos"/>
         </li>
         <li>
-          <ButtonText title="Orçamentos" to="/orcamentos" isActive/>
+          <ButtonText title="Orçamentos" to="/orcamentos" />
         </li>
         <li>
-          <ButtonText title="Histórico" to="/historico"/>
+          <ButtonText title="Histórico" to="/historico" isActive/>
         </li>
       </Menu>
 
@@ -61,16 +61,11 @@ export function Orcamentos() {
         <Button title="Pesquisar" />
       </Search>
       <Content>
-        <Section title="Orçamento de projeto">
-          <div id='boxCheckerO' ><span>Selecionar tudo</span> <input type="checkbox" /></div>
+        <Section title="Histórico de movimentação">
           <div id='auxDivMov'>
             <Table datas={data} widths={widths} inputs={inputs} />
           </div>
         </Section>
-        
-        <div style={{width: "100%", maxWidth: "30%", marginInline: "auto" }}>
-          <Button title="Gerar PDF de separação"/>
-        </div>
       </Content>
 
     </Container>

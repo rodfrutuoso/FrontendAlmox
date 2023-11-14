@@ -23,18 +23,12 @@ const data = [
   ["B-123456", "B-9876541", "123456789", "POSTES 12/1000", "5","", "", "", ""]
 ]
 
-const widths = [9.35,9.35,9.35, 23.36,9.35,18.69,6.54,4.67];
+const widths = [14,14,9.35, 23.36,9.35,18.69,6.54,4.67];
 
 // const inputs = [6,7]
 const inputs = [[5, "text"], [6, "number"], [7, "checkbox"]]
 
-const dataOrcamento = new Date("11/10/2023")
-let check
 
-function formatDate(date) {
-  const options = { year: "numeric", month: "2-digit", day: "2-digit" };
-  return date.toLocaleDateString("pt-BR", options);
-}
 
 export function JogoProjetos() {
 
@@ -57,7 +51,7 @@ export function JogoProjetos() {
           <ButtonText title="Orçamentos" to="/orcamentos" />
         </li>
         <li>
-          <ButtonText title="Histórico" />
+          <ButtonText title="Histórico" to="/historico"/>
         </li>
       </Menu>
 
