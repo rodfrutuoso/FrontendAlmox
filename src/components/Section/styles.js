@@ -31,4 +31,19 @@ export const Container = styled.section`
         }
     }
 
+    #boxCheckerJP{
+        color: ${({theme})=>theme.COLORS.GRAY_300};
+        max-width: 88.1%;
+        width: 100%;
+        margin-bottom: 12px;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        >input{
+            font-size: 250%;
+        }
+    }
+
 `

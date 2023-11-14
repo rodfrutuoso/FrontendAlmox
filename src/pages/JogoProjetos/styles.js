@@ -31,7 +31,6 @@ export const Container = styled.div`
   #Movimentacao {
     display: flex;
     align-items: flex-end;
-   
   }
 `;
 
@@ -69,6 +68,9 @@ export const Menu = styled.ul`
 `;
 
 export const Search = styled.div`
+  width: 100%;
+  max-width: 70%;
+  margin-inline: auto;
   grid-area: search;
   padding: 16px 64px 0;
   display: flex;
@@ -80,31 +82,4 @@ export const Content = styled.div`
   padding: 0 64px;
   padding-bottom: 10px;
   overflow-y: auto;
-`;
-
-export const Calendar = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-
-  height: 52px;
-  border: 0;
-  padding: 0 16px;
-  border-radius: 10px;
-  font-weight: 500;
-
-  > h3 {
-    color: ${({ theme }) => theme.COLORS.GRAY_300};
-    font-size: 14px;
-  }
-  > div {
-    font-size: 20px;
-    color: ${({ theme, value }) =>
-      new Date(value) > new Date() - 20 * 24 * 60 * 60 * 1000
-        ? theme.COLORS.GREEN
-        : theme.COLORS.RED};
-  }
 `;

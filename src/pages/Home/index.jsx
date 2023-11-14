@@ -1,4 +1,4 @@
-import { FiSearch } from 'react-icons/fi'
+import { LuFolder } from 'react-icons/lu'
 
 import { Container, Brand, Menu, Search, Content, Calendar } from "./styles";
 import { Header } from "../../components/Header"
@@ -66,7 +66,7 @@ export function Home() {
 
       <Search>
         <Select title="Tipo de Movimentação" lista={select} />
-        <Input placeholder="Projeto" icon={FiSearch} />
+        <Input placeholder="Projeto" icon={LuFolder} />
         <Button title="Pesquisar" />
         <Calendar value={dataOrcamento}>
           <h3>Data do orçamento</h3>
