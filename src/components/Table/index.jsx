@@ -2,10 +2,10 @@ import { Container } from "./styles";
 import React from 'react'; // Adicione esta linha
 
 
-export function Table({ datas, widths, inputs, ...rest }) {
+export function Table({ datas, widths, inputs, maxwidth = 100, ...rest }) {
     //${widths.reduce((acc, width) => acc + width, 0)+50}px
     return (
-        <Container {...rest} style={{ width: `100%` }}>
+        <Container {...rest} style={{ width: `100%` , maxWidth: `${maxwidth}%`, marginInline: "auto"  }}>
             <div className="cabecalho">
                 {
                     datas[0].map((titulo, index) => <h3 key={titulo} style={{ width: `${widths[index]}%` }} >{titulo}</h3>)

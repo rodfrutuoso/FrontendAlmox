@@ -24,7 +24,7 @@ const data = [
   ["20/10/2023 15:35:12", "B-123456", "123456789", "POSTES 12/1000", "5"]
 ]
 
-const widths = [20,9.35,9.35,23.36,6.54,4.67];
+const widths = [30,15,15,25,15];
 
 // const inputs = [6,7]
 const inputs = []
@@ -63,7 +63,7 @@ export function Historico() {
       <Content>
         <Section title="Histórico de movimentação">
           <div id='auxDivMov'>
-            <Table datas={data} widths={widths} inputs={inputs} />
+            <Table datas={data} widths={widths} inputs={inputs} maxwidth={60} />
           </div>
         </Section>
       </Content>

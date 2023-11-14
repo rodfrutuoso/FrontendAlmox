@@ -24,7 +24,7 @@ const data = [
   ["B-123456", "123456789", "POSTES 12/1000", "5", "", ""]
 ]
 
-const widths = [9.35,9.35, 23.36,9.35,6.54,4.67];
+const widths = [15,15, 40,15,7.5,7.5];
 
 // const inputs = [6,7]
 const inputs = [[4, "number"], [5, "checkbox"]]
@@ -64,7 +64,7 @@ export function Orcamentos() {
         <Section title="Orçamento de projeto">
           <div id='boxCheckerO' ><span>Selecionar tudo</span> <input type="checkbox" /></div>
           <div id='auxDivMov'>
-            <Table datas={data} widths={widths} inputs={inputs} />
+            <Table datas={data} widths={widths} inputs={inputs} maxwidth={60} />
           </div>
         </Section>
         
