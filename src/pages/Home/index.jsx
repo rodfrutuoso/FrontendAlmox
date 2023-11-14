@@ -9,9 +9,6 @@ import { Table } from '../../components/Table';
 import { Noteitem } from '../../components/Noteitem';
 import { Button } from '../../components/Button';
 import { Select } from '../../components/Select';
-import { Checkbox } from '../../components/Checkbox';
-
-import { useState } from 'react';
 
 const data = [
   ["PROJETO", "CODIGO", "TEXTO", "QTD ORÇADA", "QTD ENVIADA", "QTD A ENVIAR", "OBS", "ENVIAR", "VISTO"],
