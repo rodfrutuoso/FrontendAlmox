@@ -57,7 +57,7 @@ export function Home() {
           <ButtonText title="Jogo entre projetos" to="/jogoprojetos" />
         </li>
         <li>
-          <ButtonText title="Orçamentos" />
+          <ButtonText title="Orçamentos" to="/orcamentos" />
         </li>
         <li>
           <ButtonText title="Histórico" />

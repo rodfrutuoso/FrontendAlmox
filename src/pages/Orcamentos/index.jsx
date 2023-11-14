@@ -1,4 +1,5 @@
-import { LuFolderInput, LuFolderOutput } from 'react-icons/lu'
+import { LuFolder } from 'react-icons/lu'
+import { Bs123} from 'react-icons/bs'
 
 
 import { Container, Brand, Menu, Search, Content } from "./styles";
@@ -11,7 +12,7 @@ import { Button } from '../../components/Button';
 
 
 const data = [
-  ["PROJETO ORIGEM", "PROJETO DESTINO" , "CODIGO", "TEXTO", "QTD ENVIADA", "OBS", "ENVIAR", "VISTO"],
+  ["PROJETO", "PROJETO DESTINO" , "CODIGO", "TEXTO", "QTD ENVIADA", "OBS", "ENVIAR", "VISTO"],
   ["B-123456", "B-9876541", "123456789", "POSTES 12/1000", "5","", "#ADC#", "", ""],
   ["B-123456", "B-9876541", "123456789", "POSTES DT 11/400", "5","", "", "", ""],
   ["B-123456", "B-9876541", "123456789", "POSTES 12/1000", "5","", "#ADC#", "", ""],
@@ -36,7 +37,7 @@ function formatDate(date) {
   return date.toLocaleDateString("pt-BR", options);
 }
 
-export function JogoProjetos() {
+export function Orcamentos() {
 
   return (
     <Container>
@@ -51,10 +52,10 @@ export function JogoProjetos() {
           <ButtonText title="Movimentação" to="/"  />
         </li>
         <li>
-          <ButtonText title="Jogo entre projetos" to="/jogoprojetos" isActive />
+          <ButtonText title="Jogo entre projetos" to="/jogoprojetos"/>
         </li>
         <li>
-          <ButtonText title="Orçamentos" to="/orcamentos" />
+          <ButtonText title="Orçamentos" to="/orcamentos" isActive/>
         </li>
         <li>
           <ButtonText title="Histórico" />
@@ -62,12 +63,12 @@ export function JogoProjetos() {
       </Menu>
 
       <Search>
-        <Input placeholder="Projeto de origem" icon={LuFolderOutput} />
-        <Input placeholder="Projeto de destino" icon={LuFolderInput} />
+        <Input placeholder="Projeto" icon={LuFolder} />
+        <Input placeholder="Código do material" icon={Bs123} />
         <Button title="Pesquisar" />
       </Search>
       <Content>
-        <Section title="Jogo de material entre projetos">
+        <Section title="Orçamento de projeto">
           <div id='boxCheckerJP' ><span>Selecionar tudo</span> <input type="checkbox" /></div>
           <div id='auxDivMov'>
             <Table datas={data} widths={widths} inputs={inputs} />
@@ -75,7 +76,7 @@ export function JogoProjetos() {
         </Section>
         
         <div style={{width: "100%", maxWidth: "30%", marginInline: "auto" }}>
-          <Button title="Movimentar"/>
+          <Button title="Gerar PDF de separação"/>
         </div>
       </Content>
 
