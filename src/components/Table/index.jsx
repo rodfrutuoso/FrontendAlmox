@@ -3,7 +3,7 @@ import React from 'react'; // Adicione esta linha
 
 
 export function Table({ datas, widths, inputs, ...rest }) {
-    var widthTotal = 0
+    //${widths.reduce((acc, width) => acc + width, 0)+50}px
     return (
         <Container {...rest} style={{ width: `100%` }}>
             <div className="cabecalho">
