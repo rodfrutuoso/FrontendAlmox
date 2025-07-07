@@ -8,9 +8,9 @@ export function SignUp() {
   return (
     <Container>
       <Form>
-        <h1>Almox02</h1>
+        <h1>ARES</h1>
         <p>Controle de movimentação para almoxarifados</p>
-        <h2>Crie sua conta</h2>
+        <h2>Solicite o seu cadastro</h2>
         <Input
           placeholder="Nome"
           type="text"

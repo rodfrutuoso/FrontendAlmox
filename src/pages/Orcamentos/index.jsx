@@ -35,7 +35,7 @@ export function Orcamentos() {
   return (
     <Container>
       <Brand>
-        <h1>Almox02</h1>
+        <h1>ARES</h1>
       </Brand>
       <Header>
 

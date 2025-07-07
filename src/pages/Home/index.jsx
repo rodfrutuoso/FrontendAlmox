@@ -29,7 +29,7 @@ const widths = [9.35,9.35,23.36,9.35,9.35,9.35,18.69,6.54,4.67];
 const inputs = [[6, "text"], [7, "number"], [8, "checkbox"]]
 
 const select = ["Saída", "Devolução"]
-const dataOrcamento = new Date("11/10/2023")
+const dataOrcamento = new Date("11/02/2024")
 
 function formatDate(date) {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
@@ -41,7 +41,7 @@ export function Home() {
   return (
     <Container>
       <Brand>
-        <h1>Almox02</h1>
+        <h1>ARES</h1>
       </Brand>
       <Header>
 

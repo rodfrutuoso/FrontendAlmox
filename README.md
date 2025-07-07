@@ -5,6 +5,7 @@
 2. selecionar react e dps javascript comum
 
 obs: Por ter o node_modules no git ignore ele não salva do git, já q eh só rodar npm install quando
+obs2: npm run dev
 # Aulas
 Não tem uma seção para cada aula, só anoto aquilo que acho importante e separo por aula
 

@@ -8,7 +8,7 @@ export function SignIn() {
   return (
     <Container>
       <Form>
-        <h1>Almox02</h1>
+        <h1>ARES</h1>
         <p>Controle de movimentação para almoxarifados</p>
         <h2>Faça seu Login</h2>
         <Input
@@ -24,7 +24,7 @@ export function SignIn() {
         <Button title="Entrar"/>
 
         <Link to="/register">
-          Criar Conta
+          Solicitar criação de conta
         </Link>
       </Form>
 
